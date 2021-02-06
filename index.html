@@ -1,29 +1,65 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>题目1</title>
-</head>
-
-
-<body>
-    循环名字
-    <input value="" id="mingzi" type="mingzi" />
-    <button onclick="getdata()">提交</button>
-
-
-    <script type="text/javascript">
-
-        var i;
-        function getdata() {
-            var n = document.getElementById("mingzi").value;
-            for (i = 1; i <= n; i++) {
-                    document.write("杨文青<br/>")
-        
-            }
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>课题2~4</title>
+    <style>
+        table {
+            border: black 1px solid;
+			background-color: #b9f5b9;
         }
-    </script>
-</body>
 
+    </style>
+</head>
+<body>
+	<form name="form1" >
+	<table border="1" id="tab">
+		<tr>
+			<th>選択<input type="checkbox"></th>
+			<th>氏名<input type="button" value="追加" onclick="addtr1()"/></th>
+			<th>性別</th>
+			<th>住民税<button  type="button">削除</button></th>
+		</tr>
+		<tr>
+			<td><input type="checkbox" name="tainzhon" id="ID_tainzhon"></td>
+			<td>田中一郎</td>
+			<td><input type="radio" name="Gender" value="man" id="nan">男<input type="radio" name="Gender" value="woman" id="woman">女</td>
+			<td>￥12,000</td>
+		</tr>
+
+		<tr>
+			<td><input type="checkbox" name="cilan" id="ID_cilan"></td>
+			<td>衛藤次郎</td>
+			<td><input type="radio" name="CGender" value="man">男<input type="radio" name="CGender" value="woman">女</td>
+			<td>￥22,098</td>
+		</tr>
+		<tr>
+			<td><input type="checkbox" name="tianji" id="ID_tianji"></td>
+			<td>鈴木由紀</td>
+			<td><input type="radio" name="JGender" value="man">男<input type="radio" name="JGender" value="woman">女</td>
+			<td>￥2,200</td>
+		</tr>
+		
+		
+	</table>
+</form>
+	<table border="1">
+		<tr>
+			<th>合計</th>
+			<td id="allSum">￥0</td>	
+		</tr>
+		<tr>
+			<th>男性合計</th>
+			<td id="nanSum">￥0</td>	
+		</tr>
+		<tr>
+			<th>女性合計</th>
+			<td id="girlSum">￥0</td>	
+		</tr>
+	</table>
+	<script type="text/javascript" src="js/index.js"></script>
+</body>
 </html>
+
+
